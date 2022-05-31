@@ -18,20 +18,20 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="theme-color" content="#f8f8f8">
-  <title>Hello World - Sailingee</title>
+  <title>Sailingee</title>
 
   
 
   
-    <meta name="description" content="建站第一篇markdown正在研究怎么用ing">
+    <meta name="description" content="504. 七进制数给定一个整数 num，将其转化为 7 进制，并以字符串形式输出  进制转换 x%7 x&#x2F;7  12345678910111213141516class Solution &amp;#123;public:    string convertToBase7(int num) &amp;#123;        bool nagetive &#x3D; num &lt; 0;        if(nageti">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://example.com/2022/05/17/hello-world/index.html">
+<meta property="og:title" content="Sailingee">
+<meta property="og:url" content="http://example.com/2022/05/31/LeetCode/LeetCode%20504%207%E8%BF%9B%E5%88%B6/index.html">
 <meta property="og:site_name" content="Sailingee">
-<meta property="og:description" content="建站第一篇markdown正在研究怎么用ing">
+<meta property="og:description" content="504. 七进制数给定一个整数 num，将其转化为 7 进制，并以字符串形式输出  进制转换 x%7 x&#x2F;7  12345678910111213141516class Solution &amp;#123;public:    string convertToBase7(int num) &amp;#123;        bool nagetive &#x3D; num &lt; 0;        if(nageti">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-05-17T09:26:18.100Z">
-<meta property="article:modified_time" content="2022-05-31T01:40:30.238Z">
+<meta property="article:published_time" content="2022-05-31T01:52:32.886Z">
+<meta property="article:modified_time" content="2022-05-20T17:22:41.200Z">
 <meta property="article:author" content="Sailingee">
 <meta name="twitter:card" content="summary">
   
@@ -69,9 +69,7 @@
 
 <div class="widgets">
 
-
-<div class="widget-wrap" id="recent"><div class="widget-header cap dis-select"><span class="name">最近更新</span><a class="cap-action" id="rss" title="Subscribe" href="/atom.xml"><svg class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8938"><path d="M800.966 947.251c0-404.522-320.872-732.448-716.69-732.448V62.785c477.972 0 865.44 395.987 865.44 884.466h-148.75z m-162.273 0h-148.74c0-228.98-181.628-414.598-405.678-414.598v-152.01c306.205 0 554.418 253.68 554.418 566.608z m-446.24-221.12c59.748 0 108.189 49.503 108.189 110.557 0 61.063-48.44 110.563-108.188 110.563-59.747 0-108.18-49.5-108.18-110.563 0-61.054 48.433-110.556 108.18-110.556z" p-id="8939"></path></svg></a></div><div class="widget-body fs14"><div class="more-item"><a class="title" href="/2022/05/17/hello-world/">Hello World</a></div></div></div>
-
+<div class="widget-wrap single" id="toc"><div class="widget-header cap dis-select"><span class="name">本文目录</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#504-%E4%B8%83%E8%BF%9B%E5%88%B6%E6%95%B0"><span class="toc-text">504. 七进制数</span></a></li></ol></div></div></div>
 
 
 </div>
@@ -83,11 +81,16 @@
 
       
 
-<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/">文章</a></div><div id="post-meta">发布于&nbsp;<time datetime="2022-05-17T09:26:18.100Z">2022-05-17</time></div></div>
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/">文章</a></div><div id="post-meta">发布于&nbsp;<time datetime="2022-05-31T01:52:32.886Z">2022-05-31</time></div></div>
 
 <article class='content md post'>
-<h1 class="article-title"><span>Hello World</span></h1>
-<p>建站第一篇markdown<br>正在研究怎么用ing</p>
+
+<h4 id="504-七进制数"><a href="#504-七进制数" class="headerlink" title="504. 七进制数"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/base-7/">504. 七进制数</a></h4><p>给定一个整数 <code>num</code>，将其转化为 <strong>7 进制</strong>，并以字符串形式输出</p>
+<blockquote>
+<p>进制转换 x%7 x/7</p>
+</blockquote>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">string <span class="title">convertToBase7</span><span class="params">(<span class="type">int</span> num)</span> </span>&#123;</span><br><span class="line">        <span class="type">bool</span> nagetive = num &lt; <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span>(nagetive)</span><br><span class="line">            num = <span class="built_in">abs</span>(num);</span><br><span class="line">        string ans;</span><br><span class="line">        <span class="keyword">do</span>&#123;</span><br><span class="line">            ans = <span class="built_in">to_string</span>(num%<span class="number">7</span>) + ans;</span><br><span class="line">            num/=<span class="number">7</span>;</span><br><span class="line">        &#125;<span class="keyword">while</span>(num&gt;<span class="number">0</span>);</span><br><span class="line">        <span class="keyword">if</span>(nagetive)</span><br><span class="line">            ans = <span class="string">&quot;-&quot;</span> + ans;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
 
 
 <div class="article-footer reveal fs14"><section id="license"><div class="header"><span>许可协议</span></div><div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使�?-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处�?</p>
@@ -95,7 +98,7 @@
 
 </article>
 
-<div class="related-wrap reveal" id="read-next"><section class="header cap theme"><span>接下来阅读</span></section><section class="body fs14"><div class="line"></div><a id="prev" href="/2022/05/31/LeetCode/LeetCode%20657%20Judge%20Route%20Circle/">undefined<span class="note">较新</span></a></section></div>
+<div class="related-wrap reveal" id="read-next"><section class="header cap theme"><span>接下来阅读</span></section><section class="body fs14"><a id="next" href="/2022/05/31/LeetCode/LeetCode%20551%20%E5%AD%A6%E7%94%9F%E5%87%BA%E5%8B%A4%E8%AE%B0%E5%BD%95%20I/">undefined<span class="note">较早</span></a><div class="line"></div><a id="prev" href="/2022/05/31/LeetCode/LeetCode%20303%20%E5%8C%BA%E5%9F%9F%E5%92%8C%E6%A3%80%E7%B4%A2%20-%20%E6%95%B0%E7%BB%84%E4%B8%8D%E5%8F%98/">undefined<span class="note">较新</span></a></section></div>
 
 
 
