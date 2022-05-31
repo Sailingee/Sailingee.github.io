@@ -18,20 +18,20 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="theme-color" content="#f8f8f8">
-  <title>Sailingee</title>
+  <title>LeetCode 655 打印二叉树 - Sailingee</title>
 
   
 
   
     <meta name="description" content="655. 输出二叉树在一个 m*n 的二维字符串数组中输出二叉树，并遵守以下规则： 行数 m 应当等于给定二叉树的高度。列数 n 应当总是奇数。根节点的值（以字符串格式给出）应当放在可放置的第一行正中间。根节点所在的行与列会将剩余空间划分为两部分（左下部分和右下部分）。你应该将左子树输出在左下部分，右子树输出在右下部分。左下和右下部分应当有相同的大小。即使一个子树为空而另一个非空，你不需要为空的子">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Sailingee">
+<meta property="og:title" content="LeetCode 655 打印二叉树">
 <meta property="og:url" content="http://example.com/2022/05/31/LeetCode/LeetCode%20655%E6%89%93%E5%8D%B0%E4%BA%8C%E5%8F%89%E6%A0%91/index.html">
 <meta property="og:site_name" content="Sailingee">
 <meta property="og:description" content="655. 输出二叉树在一个 m*n 的二维字符串数组中输出二叉树，并遵守以下规则： 行数 m 应当等于给定二叉树的高度。列数 n 应当总是奇数。根节点的值（以字符串格式给出）应当放在可放置的第一行正中间。根节点所在的行与列会将剩余空间划分为两部分（左下部分和右下部分）。你应该将左子树输出在左下部分，右子树输出在右下部分。左下和右下部分应当有相同的大小。即使一个子树为空而另一个非空，你不需要为空的子">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-05-31T01:52:42.117Z">
-<meta property="article:modified_time" content="2022-05-19T16:17:05.034Z">
+<meta property="article:modified_time" content="2022-05-31T02:01:56.254Z">
 <meta property="article:author" content="Sailingee">
 <meta name="twitter:card" content="summary">
   
@@ -84,7 +84,7 @@
 <div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/">文章</a></div><div id="post-meta">发布于&nbsp;<time datetime="2022-05-31T01:52:42.117Z">2022-05-31</time></div></div>
 
 <article class='content md post'>
-
+<h1 class="article-title"><span>LeetCode 655 打印二叉树</span></h1>
 <h2 id="655-输出二叉树"><a href="#655-输出二叉树" class="headerlink" title="655. 输出二叉树"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/print-binary-tree/">655. 输出二叉树</a></h2><p>在一个 m*n 的二维字符串数组中输出二叉树，并遵守以下规则：</p>
 <p>行数 m 应当等于给定二叉树的高度。<br>列数 n 应当总是奇数。<br>根节点的值（以字符串格式给出）应当放在可放置的第一行正中间。根节点所在的行与列会将剩余空间划分为两部分（左下部分和右下部分）。你应该将左子树输出在左下部分，右子树输出在右下部分。左下和右下部分应当有相同的大小。即使一个子树为空而另一个非空，你不需要为空的子树输出任何东西，但仍需要为另一个子树留出足够的空间。然而，如果两个子树都为空则不需要为它们留出任何空间。<br>每个未使用的空间应包含一个空的字符串””。<br>使用相同的规则输出子树。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">示例 1:</span><br><span class="line"></span><br><span class="line">输入:</span><br><span class="line">     1</span><br><span class="line">    /</span><br><span class="line">   2</span><br><span class="line">输出:</span><br><span class="line">[[&quot;&quot;, &quot;1&quot;, &quot;&quot;],</span><br><span class="line"> [&quot;2&quot;, &quot;&quot;, &quot;&quot;]]</span><br><span class="line">示例 2:</span><br><span class="line"></span><br><span class="line">输入:</span><br><span class="line">     1</span><br><span class="line">    / \</span><br><span class="line">   2   3</span><br><span class="line">    \</span><br><span class="line">     4</span><br><span class="line">输出:</span><br><span class="line">[[&quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;1&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;],</span><br><span class="line"> [&quot;&quot;, &quot;2&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;3&quot;, &quot;&quot;],</span><br><span class="line"> [&quot;&quot;, &quot;&quot;, &quot;4&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;]]</span><br></pre></td></tr></table></figure>
@@ -116,7 +116,7 @@
 
 </article>
 
-<div class="related-wrap reveal" id="read-next"><section class="header cap theme"><span>接下来阅读</span></section><section class="body fs14"><a id="next" href="/2022/05/31/LeetCode/LeetCode%20303%20%E5%8C%BA%E5%9F%9F%E5%92%8C%E6%A3%80%E7%B4%A2%20-%20%E6%95%B0%E7%BB%84%E4%B8%8D%E5%8F%98/">undefined<span class="note">较早</span></a><div class="line"></div><a id="prev" href="/2022/05/31/LeetCode/LeetCode%20561%E6%95%B0%E7%BB%84%E6%8B%86%E5%88%86/">undefined<span class="note">较新</span></a></section></div>
+<div class="related-wrap reveal" id="read-next"><section class="header cap theme"><span>接下来阅读</span></section><section class="body fs14"><a id="next" href="/2022/05/31/LeetCode/LeetCode%20303%20%E5%8C%BA%E5%9F%9F%E5%92%8C%E6%A3%80%E7%B4%A2%20-%20%E6%95%B0%E7%BB%84%E4%B8%8D%E5%8F%98/">undefined<span class="note">较早</span></a><div class="line"></div><a id="prev" href="/2022/05/31/LeetCode/LeetCode%20561%E6%95%B0%E7%BB%84%E6%8B%86%E5%88%86/">LeetCode 561 数组拆分<span class="note">较新</span></a></section></div>
 
 
 
